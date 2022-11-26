@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">    
+    <mat-form-field appearance="outline" class="full-width" col-50>
+      <mat-label class="saw">Email</mat-label>
+      <input class="opi" matInput placeholder="preencha o nome do usuario" [(ngModel)]="model.email" required autocomplete="off">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label class="sae">Senha</mat-label>
+        <input class="opl" matInput placeholder="preencha o sobrenome do usuario" [(ngModel)]="model.senha" required autocomplete="off">
+    </mat-form-field>
+        
+
+    <div class="toolbar___form">
+      <button mat-raised-button routerLink="/usuarios">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+    </div>
+  </div>
+</body>
+</html>
+

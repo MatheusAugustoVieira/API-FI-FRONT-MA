@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container-toolbar">
+    <button class="new" mat-raised-button color="background" routerLink="/Usuario/new">Novo Usuário </button>
+  </div>
+  
+    <div class="div-table mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id" >
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element" class="actions">
+            <button mat-button routerLink="/Usuario/{{ element.id }}">
+              <mat-icon>edit</mat-icon>
+            </button>
+  
+            <button (click)="delete(element)" mat-button>
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+          <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+        </ng-container>
+        <ng-container matColumnDef="senha">
+          <th mat-header-cell *matHeaderCellDef>senha</th>
+          <td mat-cell *matCellDef="let element">{{ element.senha}}</td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="columns;"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+  
+      </table>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">    
+    <mat-form-field appearance="outline" class="full-width" col-50>
+      <mat-label class="fea">Atualizado</mat-label>
+      <input matInput placeholder="preencha o nome do usuario" [(ngModel)]="model.atualizado" required autocomplete="off">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label class="fes">Ferramenta</mat-label>
+        <input matInput placeholder="preencha o sobrenome do usuario" [(ngModel)]="model.ferramenta" required autocomplete="off">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label class="fed">Objetivo</mat-label>
+        <input matInput placeholder="preencha o sobrenome do usuario" [(ngModel)]="model.objetivo" required autocomplete="off">
+      </mat-form-field> <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label class="fee">Campo</mat-label>
+        <input matInput placeholder="preencha o sobrenome do usuario" [(ngModel)]="model.campo" required autocomplete="off">
+      </mat-form-field>
+        
+    <div class="toolbar___form">
+      <button mat-raised-button routerLink="/questoes">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+    </div>
+  </div>
+</body>
+</html>

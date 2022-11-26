@@ -1,0 +1,39 @@
+h1{
+    position: absolute;
+    left: 555px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    color: rgb(86, 255, 7);
+}
+
+@import '@angular/material/theming';
+@include mat-core();
+
+$custom-app-primary: mat-palette($mat-gray, 900);
+$custom-app-secondary: mat-palette($mat-blue, 900);
+$custom-app-warn: mat-palette($mat-red, A700);
+
+$custom-theme: mat-dark-theme($custom-app-primary, $custom-app-secondary, $custom-app-warn);
+
+@include angular-material-theme($custom-theme);
+
+
+.faind___container_body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+}
+
+.faind___toolbar{
+    position: flex;
+    z-index: 2;
+}
+
+.faind___mat-sidenav-container{
+    flex:1;
+    margin-top: 0px;
+}
